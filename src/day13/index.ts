@@ -50,8 +50,6 @@ async function partB() {
   const arrangements = permute([...Array.from(new Set(data.map((p) => p.name))), ME]);
   const happinesses = arrangements.map((arrangement) => calcHappiness(arrangement, data)).sort((a, b) => b - a);
 
-  console.log(arrangements);
-
   return happinesses[0];
 }
 
