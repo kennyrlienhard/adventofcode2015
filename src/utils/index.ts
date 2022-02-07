@@ -18,6 +18,7 @@ import { startSeventeen } from '../day17';
 import { startEighteen } from '../day18';
 import { startNineteen } from '../day19';
 import { startTwenty } from '../day20';
+import { startTwentyOne } from '../day21';
 
 const PUZZLES = [
   startOne,
@@ -40,6 +41,7 @@ const PUZZLES = [
   startEighteen,
   startNineteen,
   startTwenty,
+  startTwentyOne,
 ];
 
 function printResult(day: number, answers: (number | string)[]) {
