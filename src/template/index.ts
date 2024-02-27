@@ -2,7 +2,7 @@ import { loadData } from './utils';
 
 const IS_TRAINING = true;
 
-async function partOne() {
+async function partA() {
   const data = await loadData(IS_TRAINING);
 
   console.log(data);
@@ -10,12 +10,10 @@ async function partOne() {
   return 0;
 }
 
-async function partTwo() {
+async function partB() {
   const data = await loadData(IS_TRAINING);
 
   return 0;
 }
 
-export async function startOne() {
-  return Promise.all([partOne, partTwo].map((puzzle) => puzzle()));
-}
+export default [partA, partB];
