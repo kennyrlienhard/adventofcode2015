@@ -61,6 +61,4 @@ async function partB() {
   return longestDistance;
 }
 
-export async function startNine() {
-  return Promise.all([partA, partB].map((puzzle) => puzzle()));
-}
+export default [partA, partB];

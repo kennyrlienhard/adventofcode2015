@@ -53,6 +53,4 @@ async function partB() {
   return reindeers.map((r) => r.score).sort((a, b) => b - a)[0];
 }
 
-export async function startFourteen() {
-  return Promise.all([partA, partB].map((puzzle) => puzzle()));
-}
+export default [partA, partB];

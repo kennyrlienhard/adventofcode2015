@@ -64,6 +64,4 @@ async function partB() {
   return run(handleBrightness);
 }
 
-export async function startSix() {
-  return Promise.all([partA, partB].map((puzzle) => puzzle()));
-}
+export default [partA, partB];

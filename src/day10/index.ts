@@ -38,6 +38,4 @@ function partB() {
   return run(50);
 }
 
-export async function startTen() {
-  return [partA, partB].map((puzzle) => puzzle());
-}
+export default [partA, partB];

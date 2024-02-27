@@ -66,6 +66,4 @@ function partB() {
   return run('hepxxyzz');
 }
 
-export async function startEleven() {
-  return [partA, partB].map((puzzle) => puzzle());
-}
+export default [partA, partB];

@@ -85,6 +85,4 @@ async function partB() {
   return solve(true);
 }
 
-export async function startEighteen() {
-  return Promise.all([partA, partB].map((puzzle) => puzzle()));
-}
+export default [partA, partB];

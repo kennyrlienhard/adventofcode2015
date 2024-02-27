@@ -10,6 +10,4 @@ async function partB() {
   return lines.reduce((acc, line) => acc + (JSON.stringify(line).length - line.length), 0);
 }
 
-export async function startEight() {
-  return Promise.all([partA, partB].map((puzzle) => puzzle()));
-}
+export default [partA, partB];

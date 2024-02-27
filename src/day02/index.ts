@@ -48,6 +48,4 @@ async function partB() {
   return result;
 }
 
-export async function startTwo() {
-  return Promise.all([partA, partB].map((puzzle) => puzzle()));
-}
+export default [partA, partB];

@@ -44,6 +44,4 @@ async function partB() {
   return combinations.filter((c) => c.length === combinations[0].length).length;
 }
 
-export async function startSeventeen() {
-  return Promise.all([partA, partB].map((puzzle) => puzzle()));
-}
+export default [partA, partB];

@@ -45,6 +45,4 @@ async function partB() {
   return result[0].id;
 }
 
-export async function startSixteen() {
-  return Promise.all([partA, partB].map((puzzle) => puzzle()));
-}
+export default [partA, partB];

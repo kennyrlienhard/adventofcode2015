@@ -48,6 +48,4 @@ function partB() {
   return house;
 }
 
-export async function startTwenty() {
-  return Promise.all([partA, partB].map((puzzle) => puzzle()));
-}
+export default [partA, partB];

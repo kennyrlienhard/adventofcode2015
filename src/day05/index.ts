@@ -68,6 +68,4 @@ async function partB() {
   return run(isNiceB);
 }
 
-export async function startFive() {
-  return Promise.all([partA, partB].map((puzzle) => puzzle()));
-}
+export default [partA, partB];

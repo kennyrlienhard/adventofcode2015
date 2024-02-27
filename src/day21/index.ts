@@ -96,6 +96,4 @@ async function partB() {
   return getMaxLoserCostOption(getCombinations(shop));
 }
 
-export async function startTwentyOne() {
-  return Promise.all([partA, partB].map((puzzle) => puzzle()));
-}
+export default [partA, partB];

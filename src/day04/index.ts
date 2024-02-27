@@ -31,6 +31,4 @@ function partB() {
   return run('000000');
 }
 
-export function startFour() {
-  return [partA, partB].map((puzzle) => puzzle());
-}
+export default [partA, partB];

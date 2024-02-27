@@ -40,6 +40,4 @@ async function partB() {
   return countHouses([...createPath(cmdsSet1), ...createPath(cmdsSet2)]);
 }
 
-export async function startThree() {
-  return Promise.all([partA, partB].map((puzzle) => puzzle()));
-}
+export default [partA, partB];

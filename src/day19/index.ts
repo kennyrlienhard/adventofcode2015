@@ -51,6 +51,4 @@ async function partB() {
   return steps + 1;
 }
 
-export async function startNineteen() {
-  return Promise.all([partA, partB].map((puzzle) => puzzle()));
-}
+export default [partA, partB];

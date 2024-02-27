@@ -9,7 +9,7 @@ function getNextCode(code: Code): Code {
   return [row - 1, col + 1, nextValue];
 }
 
-async function partOne() {
+async function partA() {
   const FIRST_CODE = 20151125;
 
   const TARGET_ROW = 2981;
@@ -23,6 +23,4 @@ async function partOne() {
   return code[2];
 }
 
-export async function startTwentyFive() {
-  return Promise.all([partOne].map((puzzle) => puzzle()));
-}
+export default [partA];

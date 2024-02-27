@@ -32,6 +32,4 @@ async function partB() {
   return run(isValid);
 }
 
-export async function startTwelve() {
-  return Promise.all([partA, partB].map((puzzle) => puzzle()));
-}
+export default [partA, partB];

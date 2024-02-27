@@ -53,6 +53,4 @@ async function partB() {
   return happinesses[0];
 }
 
-export async function startThirteen() {
-  return Promise.all([partA, partB].map((puzzle) => puzzle()));
-}
+export default [partA, partB];

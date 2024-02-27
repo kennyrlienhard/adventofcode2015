@@ -61,6 +61,4 @@ async function partB() {
   return maxScore;
 }
 
-export async function startFiveteen() {
-  return Promise.all([partA, partB].map((puzzle) => puzzle()));
-}
+export default [partA, partB];
