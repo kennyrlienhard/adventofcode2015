@@ -163,16 +163,6 @@ function solve(mode: Mode) {
 
   // console.log(`Games played: ${gamesPlayed}`);
 
-  // for (let i = 0; i < GAMES; i += 1) {
-  //   try {
-  //     const spending = play(mode);
-  //     // console.log(`Player wins with spending of ${spending} mana.`);
-  //     if (spending < result) result = spending;
-  //   } catch (error) {
-  //     // console.log(error.message);
-  //   }
-  // }
-
   return result;
 }
 
