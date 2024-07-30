@@ -52,30 +52,26 @@ const PUZZLES = [
   day25,
 ];
 
-const DAYS_TO_SOLVE = [23];
+const DAYS_TO_SOLVE = [15];
 
 function printResult(result: { day: number; part: number; start: Date; end: Date; value: number }) {
   console.log(`Day ${('0' + result.day).slice(-2)}. Part ${result.part}: ${result.value}`);
-  console.log(`Executed in ${(result.end.getTime() - result.start.getTime()) / 1000}s`);
+  console.log(`Exucted in ${(result.end.getTime() - result.start.getTime()) / 1000}s`);
   console.log();
 }
 
 async function solvePuzzlesForDays(days: number[]) {
-  const result = (
-    await Promise.all(
-      days.map((day) =>
-        Promise.all(
-          PUZZLES[day - 1].map(async (p, i) => {
-            const start = new Date();
-            const value = await p();
-            return { day, part: i + 1, start, end: new Date(), value };
-          })
-        )
-      )
-    )
-  ).flat();
+  const result = [];
 
-  result.forEach(printResult);
+  for (const day of days) {
+    for (let i = 0; i < PUZZLES[day - 1].length; i += 1) {
+      const start = new Date();
+      const value = await PUZZLES[day - 1][i]();
+      result.push({ day, part: i + 1, start, end: new Date(), value });
+    }
+  }
+
+  result.flat().forEach(printResult);
 }
 
 solvePuzzlesForDays(DAYS_TO_SOLVE);

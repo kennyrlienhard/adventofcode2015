@@ -13,6 +13,8 @@ async function partA() {
 async function partB() {
   const data = await loadData(IS_TRAINING);
 
+  console.log(data);
+
   return 0;
 }
 

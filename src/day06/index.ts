@@ -9,14 +9,6 @@ function count(config: number[][]) {
   return config.reduce((acc, line) => acc + lineReducer(line), 0);
 }
 
-function printConfig(config: number[][]) {
-  config.forEach((line) => {
-    console.log(line.join(''));
-  });
-
-  console.log();
-}
-
 function handleLight(instruction: InstructionInterface, config: number[][]) {
   const result = config.map((line) => [...line]);
 

@@ -26,3 +26,11 @@ export async function loadData(trainingData = false): Promise<InstructionInterfa
   };
   return (await getData(6, trainingData)).map(parseInput);
 }
+
+export function printConfig(config: number[][]) {
+  config.forEach((line) => {
+    console.log(line.join(''));
+  });
+
+  console.log();
+}

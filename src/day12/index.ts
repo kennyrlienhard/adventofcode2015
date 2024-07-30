@@ -10,7 +10,7 @@ async function run(filter: (val: unknown) => boolean) {
 
     const nextObjects = values.filter((val) => typeof val === 'object' && filter(val));
 
-    result += values.filter((val) => typeof val === 'number').reduce((acc, val) => acc + parseInt(val, 10), 0);
+    result += values.filter((val) => typeof val === 'number').reduce((acc, val) => acc + Number(val), 0);
 
     nextObjects.forEach((nextObject) => {
       parse(nextObject);
